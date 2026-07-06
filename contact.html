@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — EventHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body data-page="contact">
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg site-navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="assets/img/EventHub.png" alt="EventHub Logo" class="navbar-logo"
+               onerror="this.src='https://placehold.co/40x40/2563eb/ffffff?text=E'">
+          EventHub
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">All Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            <li class="nav-item ms-lg-2">
+              <button class="btn-theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-section py-4">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p class="mb-0">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+      </div>
+    </section>
+
+    <section class="section-padding pt-4">
+      <div class="container">
+        <!-- Alerts -->
+        <div class="alert alert-success d-none" id="contactAlertSuccess" role="alert">
+          <i class="fa-solid fa-circle-check"></i>
+          <strong>Success!</strong> Your message has been sent. We'll get back to you soon.
+        </div>
+        <div class="alert alert-danger d-none" id="contactAlertError" role="alert">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <strong>Please fix the following errors:</strong>
+          <ul class="mb-0 mt-2" id="contactErrorMessage"></ul>
+        </div>
+
+        <div class="row g-4">
+          <!-- Contact Form -->
+          <div class="col-lg-7">
+            <div class="contact-form-wrapper">
+              <h3 class="mb-4">Send a Message</h3>
+              <form id="contactForm" novalidate>
+                <div class="mb-3">
+                  <label for="contactName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="contactName" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="contactEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="contactEmail" placeholder="you@example.com" required>
+                </div>
+                <div class="mb-3">
+                  <label for="contactMessage" class="form-label">Message <span class="text-danger">*</span></label>
+                  <textarea class="form-control" id="contactMessage" rows="5" placeholder="How can we help you?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">
+                  <i class="fa-solid fa-paper-plane"></i> Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Alternative Contact -->
+          <div class="col-lg-5">
+            <div class="contact-info-card">
+              <h3 class="mb-4">Other Ways to Reach Us</h3>
+
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <h6 class="mb-1">Email</h6>
+                  <a href="mailto:omarrmhdii@gmail.com">omarrmhdii@gmail.com</a>
+                  <p class="small text-muted mb-0">For general inquiries</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-headset"></i></div>
+                <div>
+                  <h6 class="mb-1">Support</h6>
+                  <a href="mailto:omarrmhdii@gmail.com">omarrmhdii@gmail.com</a>
+                  <p class="small text-muted mb-0">Technical help & event issues</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <h6 class="mb-1">Phone</h6>
+                  <p class="mb-0">+963 949-990-150</p>
+                  <p class="small text-muted mb-0">Mon–Fri, 9 AM – 6 PM</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <h6 class="mb-1">Office</h6>
+                  <p class="mb-0">123 Community Ave<br>City Center, ST 10001</p>
+                </div>
+              </div>
+
+              <hr>
+
+              <h6 class="mb-3">Follow Us on Social Media</h6>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5><i class="fa-solid fa-calendar-days"></i> EventHub</h5>
+          <p>Your community platform for discovering and sharing local events.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact</h5>
+          <p><i class="fa-solid fa-envelope"></i> omarrmhdii@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> +963 949-990-150</p>
+          <p><i class="fa-solid fa-location-dot"></i> 123 Community Ave, City Center</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Follow Us</h5>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 EventHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
